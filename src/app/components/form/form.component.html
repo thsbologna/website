@@ -1,0 +1,94 @@
+<section id="email">
+    <p-toast />
+    <h1 class="block text-6xl font-bold mb-4">Contattaci</h1>
+    <form [formGroup]="form" id="form" (submit)="sendForm()">
+  
+      <div class="flex flex-column gap-2">
+        <input pInputText id="ragione_sociale" placeholder="Ragione Sociale" pTooltip="Ragione Sociale"
+          tooltipPosition="top" formControlName="businessName" />
+        <small *ngIf="
+              form.controls['businessName'].invalid &&
+              (form.controls['businessName'].dirty || form.controls['businessName'].touched)
+            " class="p-error">Ragione sociale non valida</small>
+      </div>
+  
+      <div class="flex flex-column gap-2">
+        <input pInputText id="codice_fiscale" placeholder="Codice Fiscale" pTooltip="Codice Fiscale" tooltipPosition="top"
+          formControlName="taxCode" />
+        <small *ngIf="
+              form.controls['taxCode'].invalid &&
+              (form.controls['taxCode'].dirty || form.controls['taxCode'].touched)
+            " class="p-error">Codice Fiscale non valido</small>
+      </div>
+  
+      <div class="double_single">
+        <div class="flex flex-column gap-2 w-full">
+          <input pInputText id="mail" placeholder="E-Mail" pTooltip="Email" tooltipPosition="top"
+            formControlName="emailAddress" />
+          <small *ngIf="
+              form.controls['emailAddress'].invalid &&
+              (form.controls['emailAddress'].dirty || form.controls['emailAddress'].touched)
+            " class="p-error">Indirizzo email non valido</small>
+        </div>
+        <div class="flex flex-column gap-2 w-full">
+          <input pInputText id="p_iva" placeholder="Partita Iva" pTooltip="Partita Iva"
+            tooltipPosition="top" formControlName="vatNumber" pKeyFilter="int" />
+          <small *ngIf="
+              form.controls['vatNumber'].invalid &&
+              (form.controls['vatNumber'].dirty || form.controls['vatNumber'].touched)
+            " class="p-error">Partita IVA non valida</small>
+        </div>
+      </div>
+  
+      <div class="flex flex-column gap-2">
+        <p-dropdown id="attivita" [options]="typesOfWork" placeholder="Seleziona un tipo di attivita'"
+          pTooltip="Tipo attività" tooltipPosition="top" formControlName="activity" />
+        <small *ngIf="
+              form.controls['activity'].invalid &&
+              (form.controls['activity'].dirty || form.controls['activity'].touched)
+            " class="p-error">Tipo attivita' non valido</small>
+      </div>
+  
+      <div class="double_single">
+        <div class="flex flex-column gap-2">
+          <p-dropdown [options]="provinces" placeholder="Seleziona una provincia" pTooltip="Provincia"
+            tooltipPosition="top" formControlName="province" />
+          <small *ngIf="
+              form.controls['province'].invalid &&
+              (form.controls['province'].dirty || form.controls['province'].touched)
+            " class="p-error">Provincia non valida</small>
+        </div>
+  
+        <div id="telefono">
+          <div class="flex flex-column gap-2">
+            <p-dropdown id="nation" [options]="countryCodes" optionLabel="value" optionValue="value" placeholder="Prefisso telefonico"
+              pTooltip="Prefisso telefonico" tooltipPosition="top" formControlName="countryCode" >
+              <ng-template let-countryCode pTemplate="item">
+                <div>{{ countryCode.key }} ({{ countryCode.value }})</div>
+            </ng-template>
+            </p-dropdown>
+            <small *ngIf="
+              form.controls['countryCode'].invalid &&
+              (form.controls['countryCode'].dirty || form.controls['countryCode'].touched)
+            " class="p-error">Prefisso non valido</small>
+          </div>
+          <div class="flex flex-column gap-2">
+            <input pInputText inputId="phone_number" placeholder="Numero di telefono"
+              pTooltip="numero di telefono" tooltipPosition="top" formControlName="phoneNumber" pKeyFilter="int" />
+            <small *ngIf="
+              form.controls['phoneNumber'].invalid &&
+              (form.controls['phoneNumber'].dirty || form.controls['phoneNumber'].touched)
+            " class="p-error">Numero di telefono non valido</small>
+          </div>
+        </div>
+      </div>
+  
+      <textarea rows="5" cols="30" pInputTextarea placeholder="Lascia un messaggio" pTooltip="Messaggio"
+        tooltipPosition="top" formControlName="message"></textarea>
+      <small *ngIf="
+              form.controls['message'].invalid &&
+              (form.controls['message'].dirty || form.controls['message'].touched)
+            " class="p-error">Messaggio non valido</small>
+      <p-button label="Invia" type="submit" severity="primary" [disabled]="!form.valid" />
+    </form>
+  </section>
