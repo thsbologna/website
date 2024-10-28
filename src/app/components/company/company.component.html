@@ -1,0 +1,11 @@
+<main id="azienda">
+
+    <!-- Sezioni con paragrafi -->
+    @for (s of sections; track $index) {
+    <app-company-section [section]="s" [id]="s.cssId" />
+    }
+
+    <app-products id="prodotti" />
+    <app-references id="referenze" />
+    <app-partners />
+</main>

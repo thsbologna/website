@@ -1,0 +1,44 @@
+[
+    {
+      "id": 1,
+      "imageSource": "../../../assets/images/partners/compuprint.png",
+      "link": "https://www.compuprint.com/",
+      "title": "Compuprint"
+    },
+    {
+      "id": 2,
+      "imageSource": "../../../assets/images/partners/hp.png",
+      "link": "https://www.hp.com/it-it/home.html",
+      "title": "HP"
+    },
+    {
+      "id": 3,
+      "imageSource": "../../../assets/images/partners/tally.png",
+      "link": "https://printronix.com/",
+      "title": "Tally Genicom"
+    },
+    {
+      "id": 4,
+      "imageSource": "../../../assets/images/partners/oki.png",
+      "link": "https://www.oki.com/",
+      "title": "OKI"
+    },
+    {
+      "id": 5,
+      "imageSource": "../../../assets/images/partners/fujitsu.png",
+      "link": "https://www.fujitsu.com/global/about/corporate/locations/worldlocation/europe/italy.html",
+      "title": "Fujitsu"
+    },
+    {
+      "id": 6,
+      "imageSource": "../../../assets/images/partners/shc.png",
+      "link": "https://www.comitec.it/it/home.html",
+      "title": "SHC"
+    },
+    {
+      "id": 7,
+      "imageSource": "../../../assets/images/partners/xerox.png",
+      "link": "https://www.xerox.it/it-it",
+      "title": "Xerox"
+    }
+  ]

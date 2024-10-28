@@ -1,0 +1,26 @@
+[
+    {
+      "id": "1",
+      "severity": "success",
+      "icon": "pi pi-shop",
+      "routerLink": "/store"
+    },
+    {
+      "id": "2",
+      "severity": "danger",
+      "icon": "pi pi-envelope",
+      "routerLink": "/contatti"
+    },
+    {
+      "id": "3",
+      "severity": "warning",
+      "icon": "pi pi-phone",
+      "routerLink": "/contatti"
+    },
+    {
+      "id": "4",
+      "severity": "primary",
+      "icon": "pi pi-linkedin",
+      "routerLink": "/shop"
+    }
+  ]

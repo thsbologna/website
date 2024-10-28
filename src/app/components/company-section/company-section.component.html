@@ -1,0 +1,19 @@
+<section [id]="section.cssId" class="grid grid-nogutter surface-section text-900 w-full h-full" >
+    @if (section.id % 2 == 0) {
+        <div id="section_image" class="col-12 lg:col-6 overflow-hidden flex justify-content-center align-items-center bg-white">
+            <img [src]="section.image" [alt]="section.imageDescription" class=" block lg:h-full">
+        </div>
+    }
+    <div id="section_text_container" [classList]="'col-12 lg:col-6 p-6 text-justify flex align-items-center py-8 ' + section.bgColor" >
+        <div>
+            <span class="block text-6xl font-bold mb-1">{{ section.title }}</span>
+            <p *ngIf="section.id != 3" class="mt-0 text-100 font-semibold line-height-3">{{ section.description }}</p>
+            <p *ngIf="section.id == 3" class="mt-0 text-900 font-semibold line-height-3">{{ section.description }}</p>
+        </div>
+    </div>
+    @if (section.id % 2 != 0 ) {
+        <div class="col-12 lg:col-6 overflow-hidden flex justify-content-center align-items-center bg-white">
+            <img [src]="section.image" [alt]="section.imageDescription" class=" block lg:h-full">
+        </div>
+    }
+</section>

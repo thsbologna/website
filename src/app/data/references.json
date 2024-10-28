@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "imageSource": "../../../assets/images/references/martelli.png",
+    "link": "https://www.martelli.com/",
+    "title": "Gruppo Martelli"
+  },
+  {
+    "id": 2,
+    "imageSource": "../../../assets/images/references/voyager.png",
+    "link": "https://www.voyager-srl.it/",
+    "title": "Voyager"
+  },
+  {
+    "id": 3,
+    "imageSource": "../../../assets/images/references/tir.png",
+    "link": "http://tirvalvoflangia.com/",
+    "title": "TIR Valvoflangia Srl"
+  },
+  {
+    "id": 4,
+    "imageSource": "../../../assets/images/references/demaria.png",
+    "link": "https://demariacarni.it/",
+    "title": "Demaria Srl"
+  },
+  {
+    "id": 5,
+    "imageSource": "../../../assets/images/references/celin.png",
+    "link": "https://carnicelin.it/",
+    "title": "Carni Celin Srl"
+  },
+  {
+    "id": 6,
+    "imageSource": "../../../assets/images/references/interpump.png",
+    "link": "https://www.interpumpgroup.it/it",
+    "title": "Interpum Group Spa"
+  },
+  {
+    "id": 7,
+    "imageSource": "../../../assets/images/references/doc.png",
+    "link": "https://www.interpumpgroup.it/it",
+    "title": "DOC&G Srl"
+  }
+]

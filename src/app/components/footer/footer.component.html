@@ -1,0 +1,29 @@
+<p-divider />
+<footer class="surface-section px-4 py-4 md:px-6 lg:px-8">
+    <div class="text-center mb-4">
+        <img src="../../../assets/images/ths_logo.png" alt="" width="200px">
+    </div>
+    <div class="text-700 text-center">
+        <div class="text-900 font-bold text-md mb-3">© 2024 TH&S Bologna Srl,</div>
+        <div class="text-700 text-md mb-5">
+            Blocco 4A Galliera A n.26/28 CENTERGROSS - Bologna - P.Iva: 00494741200 <br>
+            Tutti i marchi riportati sono marchi registrati e appartengono ai loro rispettivi proprietari.</div>
+    </div>
+    <p-divider />
+    <div class="w-full flex justify-content-center align-items-center gap-4">
+        @for (item of items; track $index) {
+        <p-button *ngIf="item['id'] == '1' || item['id'] == '2'" [routerLink]="item.routerLink" size="small"
+            class="contact_link" [severity]="item['severity']"> <i [classList]="item.icon"></i></p-button>
+
+        <a *ngIf="item['id'] == '3'" href="tel:051863340">
+            <p-button size="small" class="contact_link" [severity]="item['severity']"> <i
+                    [classList]="item.icon"></i></p-button>
+        </a>
+
+        <a *ngIf="item['id'] == '4'" href="https://it.linkedin.com/company/th-s-bologna-srl" target="_blank">
+            <p-button size="small" class="contact_link" [severity]="item['severity']"> <i
+                    [classList]="item.icon"></i></p-button>
+        </a>
+        }
+    </div>
+</footer>
